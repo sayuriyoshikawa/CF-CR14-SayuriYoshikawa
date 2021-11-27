@@ -57,7 +57,7 @@ $whetherbody = "
             background-size: cover;
         }
 
-        .row {
+        .herorow {
             width: 98vw;
         }
 
@@ -72,7 +72,7 @@ $whetherbody = "
             width: 95%;
             position: absolute;
             top: 10%;
-            left: 3%;
+            left: 5%;
             color: rgba(240, 240, 240, 0.95);
             font-size: calc(35px + 2vw);
             text-shadow: 1px 1px 3px #fff5be;
@@ -109,13 +109,19 @@ $whetherbody = "
         }
 
         #map {
-            width: 50vw;
-            height: 50vw;
+            width: 30vw;
+            height: 30vw;
         }
 
         #weather {
             width: 20vw;
             height: 20vw;
+        }
+        .weatherbtn {
+            border-radius: 8px;
+            background: #e4d9f2;
+            box-shadow:  20px 20px 60px #c2b8ce,
+             -20px -20px 60px #fffaff;
         }
     </style>
     </style>
@@ -124,7 +130,7 @@ $whetherbody = "
 <body>
     <!-- hero -->
     <div class="hero">
-        <div class="row">
+        <div class="row herorow">
             <div class="col-lg-5 col-md-5 col-sm-5 left">
                 <h1>Go to <?= $locationName ?></h1>
                 <h5><?= $description ?></h5>
@@ -135,23 +141,25 @@ $whetherbody = "
 
 
     <div class="container">
+        <div class="row g-5">
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="card border-0">
                 <img src="pictures/<?= $picture ?>" class="card-img-top" alt="animal">
                 <div class="card-body">
                     <h1 class="card-title text-center"> <?= $locationName ?></h1>
-                    <h4 class="card-subtitle mb-2">Size: <?= $price ?></h4>
-
+                    <h4 class="card-subtitle mb-2 mt-3">Price: <?= $price ?></h4>
+                    <h4 class="card-subtitle mb-2">Duration: <?= $duration ?></h4>
                     <h5 class="card-text"><?= $description ?></h5>
                 </div>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
- <div id="map"></div>
-        <button class="btn btn-primary" id="btn">Weather</button>
-        <div id="weather"></div>
+            <div id="map"></div>
+            <button class="btn m-3 weatherbtn" id="btn">Weather</button>
+            <div id="weather"></div>
+
         </div>
-       
+        </div>
     </div>
     <script>
         //map
