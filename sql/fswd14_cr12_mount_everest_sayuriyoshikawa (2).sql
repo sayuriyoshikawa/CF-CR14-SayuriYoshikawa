@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2021 at 07:22 PM
+-- Generation Time: Nov 27, 2021 at 08:48 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -59,7 +59,7 @@ INSERT INTO `travel` (`id`, `locationName`, `price`, `duration`, `description`, 
 (17, 'EasterIsland', 2500, '16days', 'Easter Island includes accommodation in a hotel as well as an expert guide, meals, transport', '-109.30264046959759', '-26.948816947865563', '61a24a312ddef.jpg', 'South America'),
 (18, 'Argentina', 2000, '9days', 'Patagonia Hiking', '-69.33854243333383', '-41.29275226521118', '61a24cd597161.jpg', 'South America'),
 (19, 'Zambia', 3000, '2weeks', 'Victoria Falls - Camping', '26.010685164714925', '-17.87768743999078', '61a24db659f3b.jpg', 'Africa'),
-(20, 'South Africa, Cape town', 2000, '1week', 'Camping in nature', '18.397895142560436', '-33.855090392752054', '61a24e28ecc30.jpg', 'Continent'),
+(20, 'SouthAfrica', 2000, '1week', 'Camping in nature', '18.397895142560436', '-33.855090392752054', '61a24e28ecc30.jpg', 'Africa'),
 (21, 'Morocco', 2000, '15days', 'Blue world.', '-5.268152068540903', '35.16919281966877', '61a24efa0fed7.jpg', 'Africa'),
 (22, 'Egypt', 1100, '8days', 'Splendours of the Nile', '31.235461726536965', '30.04983067454082', '61a24f8fcfe7d.jpg', 'Africa'),
 (23, 'France', 700, '2weeks', 'Wonderful experience', '2.29416134343352', '48.864028556808734', '61a250142c5af.jpg', 'Europe'),

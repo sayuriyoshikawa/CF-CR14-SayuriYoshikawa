@@ -122,7 +122,7 @@ if (mysqli_num_rows($result4)  > 0) {
             <button class="btn btn-sm m-1 delete" type="button">Delete</button>
         </a>
         <a href="travels/detail.php?id='  . $row4['id'] . '">
-            <button class="btn btn-secondary btn-sm m-1" type="button">Detail</button>
+            <button class="btn detail btn-sm m-1" type="button">Detail</button>
         </a>
         </center>
         </div>
@@ -229,7 +229,27 @@ mysqli_close($connect);
             align-items: center;
             justify-content: center;
         }
-
+        .edit{
+            background-color: #dbdfe9;
+        }
+        .delete {
+            background-color: #E4D8DC;
+        }
+        .detail {
+            background-color: #FFE3E3;
+        }
+        .edit:hover{
+             background-color: #d2d6e6;
+        }
+        .delete:hover {
+            background-color: #ddc3cc;
+        }
+        .detail:hover {
+            background-color: #ffdada;
+        }
+        .card:hover {
+            background-color: #eeeeee;
+        }
     </style>
 </head>
 

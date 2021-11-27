@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once  '../components/boot_css.php' ?>
-    <title> PHP CRUD | Add Product</title>
+    <title> Insert information</title>
     <style>
         fieldset {
             margin: auto;
@@ -17,7 +17,7 @@
 
 <body>
     <fieldset>
-        <legend class='h2'>Add Product</legend>
+        <legend class='h2'>Add information</legend>
         <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
             <table class='table'>
                 <tr>

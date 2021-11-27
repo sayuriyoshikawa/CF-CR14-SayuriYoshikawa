@@ -31,7 +31,7 @@ if ($_GET['id']) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Product</title>
+    <title>Delete tour</title>
     <?php require_once '../components/boot_css.php' ?>
     <style type="text/css">
         fieldset {
