@@ -35,7 +35,7 @@ if ($_GET['id']) {
             margin-top: 5vw;
             margin-bottom: 5vw;
             width: 50%;
-            min-width: 250px;
+            min-width: 300px;
             text-align: center;
         }
 

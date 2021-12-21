@@ -91,7 +91,7 @@ $whetherbody = "
             margin-top: 5vw;
             margin-bottom: 5vw;
             width: 80vw;
-            min-width: 250px;
+            min-width: 300px;
             color: rgb(79, 35, 13);
         }
 
@@ -111,6 +111,8 @@ $whetherbody = "
         #map {
             width: 30vw;
             height: 30vw;
+            min-width: 250px;
+            min-height: 250px;
         }
 
         #weather {
@@ -122,6 +124,17 @@ $whetherbody = "
             background: #e4d9f2;
             box-shadow:  20px 20px 60px #c2b8ce,
              -20px -20px 60px #fffaff;
+        }
+        footer {
+            margin-top: 5vw;
+            color: white;
+            text-shadow: 1px 2px 3px rgba(255, 248, 211);
+            height: 100px;
+            background-image: url("pictures/travelbg.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
     </style>
@@ -161,6 +174,10 @@ $whetherbody = "
         </div>
         </div>
     </div>
+    <footer>
+        <h2>Mount Everest</h2>
+    </footer>
+
     <script>
         //map
         var map;

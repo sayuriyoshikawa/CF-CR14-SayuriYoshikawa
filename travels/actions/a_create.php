@@ -19,11 +19,12 @@ if ($_POST) {
 
    if (mysqli_query($connect, $sql) === true) {
        $class = "success";
-       $message = "The entry below was successfully created <br>
-            <table class='table w-50'><tr>
-            <td> $locationName </td>
-            <td> $price </td>
-            </tr></table><hr>";
+       $message = 'The entry below was successfully created <br>
+                    <h4 class="card-title text-center">'. $locationName.'</h4>
+                    <h6 class="card-text text-center mb-2">Duration: '. $duration.'</h6>
+                    <h6 class="card-text text-center mb-2">Price: '. $price.' €</h6>
+                    <p class="card-text text-center mb-2">'. $description.'</p>
+               ';
        $uploadError = ($picture->error != 0)? $picture->ErrorMessage :'';
    } else {
        $class = "danger";
@@ -43,10 +44,21 @@ if ($_POST) {
         <meta charset="UTF-8">
         <title>Update</title>
         <?php require_once '../../components/boot_css.php'?>
+
+        <style>
+            .container {
+                width: 50%;
+                min-width: 250px;
+                text-align: center;
+            }
+            .container h1 {
+                text-align: center;
+            }
+        </style>
     </head>
    <body>
         <div class="container">
-            <div class="mt-3 mb-3">
+            <div class="mt-5 mb-5">
                 <h1>Create request response</h1>
            </div>
             <div class="alert alert-<?=$class;?>"  role="alert">

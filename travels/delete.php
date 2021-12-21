@@ -36,36 +36,46 @@ if ($_GET['id']) {
     <style type="text/css">
         fieldset {
             margin: auto;
-            margin-top: 100px;
-            width: 70%;
+            margin-top: 30px;
+            width: 50%;
+            min-width: 250px;
+            text-align: center;
         }
 
-        .img-thumbnail {
-            width: 70px !important;
-            height: 70px !important;
+        .travelcard {
+            margin: auto;
         }
+
     </style>
 </head>
 
 <body>
     <fieldset>
-        <legend class='h2 mb-3'> Delete request <img class='img-thumbnail rounded-circle' src='pictures/<?php echo $picture ?>' alt="<?php echo $name ?>"></ legend>
-            <h5>You have selected the data below:</h5>
-            <table class="table w-75 mt-3">
-                <tr>
-                    <td><?php echo  $locationName ?></td>
-                </tr>
-            </table>
+        <legend class='h1 mb-3 fw-bold'> Delete request </legend>
+        <h4 class="mb-3">You have selected the data below:</h4>
 
-            <h3 class="mb-4">Do you really want to delete this product? </h3>
-            <form action="actions/a_delete.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $id ?>" />
-                <input type="hidden" name="picture" value="<?php echo $picture ?>" />
-                <button class="btn btn-danger" type="submit"> Yes, delete it! </button>
-                <a href="../index.php">
-                    <button class="btn btn-warning" type="button"> No, go back! </button>
-                </a>
-            </form>
+        <div class="col-lg-8 col-md-8 col-sm-12 travelcard">
+            <div class="card border-0 shadow travelc">
+                <img src="pictures/<?php echo $picture ?>" class="card-img-top" alt="travel">
+                <div class="card-body">
+                    <h4 class="card-title text-center"><?php echo  $locationName ?></h4>
+                    <h6 class="card-text text-center mb-2">Duration: <?php echo  $duration ?></h6>
+                    <h6 class="card-text text-center mb-2">Price: <?php echo  $price ?> €</h6>
+                    <p class="card-text text-center mb-2"><?php echo  $description ?></p>
+                </div>
+
+            </div>
+        </div>
+
+        <h3 class="mb-4 mt-3">Do you really want to delete this product? </h3>
+        <form action="actions/a_delete.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $id ?>" />
+            <input type="hidden" name="picture" value="<?php echo $picture ?>" />
+            <button class="btn btn-danger" type="submit"> Yes, delete it! </button>
+            <a href="../index.php">
+                <button class="btn btn-warning" type="button"> No, go back! </button>
+            </a>
+        </form>
     </fieldset>
 </body>
 

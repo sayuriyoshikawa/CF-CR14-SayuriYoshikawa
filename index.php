@@ -22,7 +22,7 @@ if (mysqli_num_rows($result1)  > 0) {
     while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC)) {
         $europeTbody .= '
         <div class="col-lg-4 col-md-6 col-sm-12 travelcard">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow travelc">
         <img src="travels/pictures/' . $row1["picture"] . '" class="card-img-top" alt="travel">
         <div class="card-body">
             <h4 class="card-title text-center">' . $row1["locationName"] . '</h4>
@@ -51,7 +51,7 @@ if (mysqli_num_rows($result2)  > 0) {
     while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
         $africaTbody  .= '
         <div class="col-lg-4 col-md-6 col-sm-12 travelcard">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow travelc">
         <img src="travels/pictures/' . $row2["picture"] . '" class="card-img-top" alt="travel">
         <div class="card-body">
             <h4 class="card-title text-center">' . $row2["locationName"] . '</h4>
@@ -79,7 +79,7 @@ if (mysqli_num_rows($result3)  > 0) {
     while ($row3 = mysqli_fetch_array($result3, MYSQLI_ASSOC)) {
         $northTbody .= '
         <div class="col-lg-4 col-md-6 col-sm-12 travelcard">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow travelc">
         <img src="travels/pictures/' . $row3["picture"] . '" class="card-img-top" alt="travel">
         <div class="card-body">
             <h4 class="card-title text-center">' . $row3["locationName"] . '</h4>
@@ -107,7 +107,7 @@ if (mysqli_num_rows($result4)  > 0) {
     while ($row4 = mysqli_fetch_array($result4, MYSQLI_ASSOC)) {
         $southTbody .= '
         <div class="col-lg-4 col-md-6 col-sm-12 travelcard">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow travelc">
         <img src="travels/pictures/' . $row4["picture"] . '" class="card-img-top" alt="travel">
         <div class="card-body">
             <h4 class="card-title text-center">' . $row4["locationName"] . '</h4>
@@ -135,7 +135,7 @@ if (mysqli_num_rows($result5)  > 0) {
     while ($row5 = mysqli_fetch_array($result5, MYSQLI_ASSOC)) {
         $asiaTbody .= '
         <div class="col-lg-4 col-md-6 col-sm-12 travelcard">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow travelc">
         <img src="travels/pictures/' . $row5["picture"] . '" class="card-img-top" alt="travel">
         <div class="card-body">
             <h4 class="card-title text-center">' . $row5["locationName"] . '</h4>
@@ -163,7 +163,7 @@ if (mysqli_num_rows($result6)  > 0) {
     while ($row6 = mysqli_fetch_array($result6, MYSQLI_ASSOC)) {
         $australiaTbody .= '
         <div class="col-lg-4 col-md-6 col-sm-12 travelcard">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow travelc">
         <img src="travels/pictures/' . $row6["picture"] . '" class="card-img-top" alt="travel">
         <div class="card-body">
             <h4 class="card-title text-center">' . $row6["locationName"] . '</h4>
@@ -218,7 +218,7 @@ mysqli_close($connect);
             text-shadow: 1px 3px 3px #93B5C6;
             text-align: center;
         }
-        header {
+        footer {
             margin-top: 5vw;
             color: white;
             text-shadow: 1px 2px 3px rgba(255, 248, 211);
@@ -247,8 +247,19 @@ mysqli_close($connect);
         .detail:hover {
             background-color: #ffdada;
         }
-        .card:hover {
+        .travelc:hover {
             background-color: #eeeeee;
+        }
+        @media screen and (max-width: 768px)  {
+            .herocard{
+                min-width: 130px;
+                min-height: 60px;
+            }
+        }
+        @media screen and (max-width: 575px)  {
+            .row1, .row2, .row3 {
+                margin-left: 28px;
+            }
         }
     </style>
 </head>
@@ -292,12 +303,12 @@ mysqli_close($connect);
                 <h1>VOYAGE</h1>
                 <h2>Your jurney starts here</h2>
             </div>
-            <div class="col-lg-5 col-md-5 col-sm-5 g-2 heroright">
-                <div class="row">
 
+            <div class="col-lg-5 col-md-5 col-sm-5 g-2 heroright">
+                <div class="row row1">
                     <div class="card herocard border-0 col-lg-6 col-md-6 col-sm-6">
                         <a href="#europe">
-                            <div class="card-body">
+                            <div class="card-body cb">
                                 <h5 class="card-title text-center mt-1 mb-3">Europe</h5>
 
                                 <p class="card-text cardtext text-center">Show travels</p>
@@ -308,7 +319,7 @@ mysqli_close($connect);
 
                     <div class="card herocard border-0 col-lg-6 col-md-6 col-sm-6">
                         <a href="#africa">
-                            <div class="card-body">
+                            <div class="card-body cb">
                                 <h5 class="card-title text-center mt-1 mb-3">Africa</h5>
 
                                 <p class="card-text cardtext text-center">Show travels</p>
@@ -317,11 +328,11 @@ mysqli_close($connect);
                     </div>
 
                 </div>
-                <div class="row">
+                <div class="row row2">
 
                     <div class="card herocard border-0 col-lg-6 col-md-6 col-sm-6">
                         <a href="#northamerica">
-                            <div class="card-body">
+                            <div class="card-body cb">
                                 <h5 class="card-title text-center mt-1 mb-3">North America</h5>
 
                                 <p class="card-text cardtext text-center">Show travels</p>
@@ -332,7 +343,7 @@ mysqli_close($connect);
 
                     <div class="card herocard border-0 col-lg-6 col-md-6 col-sm-6">
                         <a href="#southamerica">
-                            <div class="card-body">
+                            <div class="card-body cb">
                                 <h5 class="card-title text-center mt-1 mb-3">South America</h5>
 
                                 <p class="card-text cardtext text-center">Show travels</p>
@@ -342,11 +353,11 @@ mysqli_close($connect);
 
                 </div>
 
-                <div class="row">
+                <div class="row row3">
 
                     <div class="card herocard border-0 col-lg-6 col-md-6 col-sm-6">
                         <a href="#asia">
-                            <div class="card-body">
+                            <div class="card-body cb">
                                 <h5 class="card-title text-center mt-1 mb-3">Asia</h5>
 
                                 <p class="card-text cardtext text-center">Show travels</p>
@@ -357,7 +368,7 @@ mysqli_close($connect);
 
                     <div class="card herocard border-0 col-lg-6 col-md-6 col-sm-6">
                         <a href="#australia">
-                            <div class="card-body">
+                            <div class="card-body cb">
                                 <h5 class="card-title text-center mt-1 mb-3">Australia</h5>
 
                                 <p class="card-text cardtext text-center">Show travels</p>
@@ -475,9 +486,9 @@ mysqli_close($connect);
         </div>
     </section>
 
-    <header>
+    <footer>
         <h2>Mount Everest</h2>
-    </header>
+    </footer>
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

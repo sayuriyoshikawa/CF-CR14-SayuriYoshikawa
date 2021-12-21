@@ -9,20 +9,23 @@
     <style>
         fieldset {
             margin: auto;
-            margin-top: 100px;
+            margin-top: 50px;
             width: 60%;
+            min-width: 250px;
+            text-align: center;
+
         }
     </style>
 </head>
 
 <body>
     <fieldset>
-        <legend class='h2'>Add information</legend>
+        <legend class='h1 mb-5 tx-bold'>Add information</legend>
         <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
             <table class='table'>
                 <tr>
                     <th>Loaction name</th>
-                    <td><input class='form-control' type="text" name="locationName" placeholder="Place"/></td>
+                    <td><input class='form-control' type="text" name="locationName" placeholder="Place" /></td>
                 </tr>
                 <tr>
                     <th>Continent</th>
@@ -35,7 +38,7 @@
                             <option value="South America">South America</option>
                             <option value="Asia">Asia</option>
                             <option value="Australia">Australia</option>
-                    </select>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -62,17 +65,14 @@
                     <th>Description</th>
                     <td><textarea class="form-control" type="text" name="description" placeholder="Description" rows="3"></textarea></td>
                 </tr>
-                <tr>
-                    <td>
-                        <button class='btn btn-success' type="submit"> Insert Product</button>
-                    </td>
-                    <td>
-                        <a href="../index.php">
-                            <button class='btn btn-warning' type="button"> Home </button>
-                        </a>
-                    </td>
-                </tr>
             </table>
+
+            <button class='btn btn-success' type="submit"> Insert Product</button>
+
+            <a href="../index.php">
+                <button class='btn btn-warning' type="button"> Home </button>
+            </a>
+
         </form>
     </fieldset>
 </body>

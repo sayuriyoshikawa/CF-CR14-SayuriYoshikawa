@@ -27,10 +27,18 @@ if  ($_POST) {
         <meta charset="UTF-8">
         <title>Delete</title>
         <?php require_once '../../components/boot_css.php'?> 
+        <style>
+            .container {
+                text-align: center;
+                width: 40%;
+                min-width: 250px;
+                margin-top: 30vh;
+            }
+        </style>
     </head>
    <body>
         <div class="container">
-            <div class="mt-3 mb-3">
+            <div class="mt-5 mb-5">
                 <h1>Delete request response</h1>
            </div>
             <div class="alert alert-<?=$class;?>"  role="alert">

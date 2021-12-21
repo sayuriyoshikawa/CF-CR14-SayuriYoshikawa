@@ -60,6 +60,8 @@
     width: 17vw;
     height: 9vw;
     margin: 1vw;
+    min-width: 130px;
+    min-height: 60px;
 }
 .herocard a {
     text-decoration: none;
@@ -89,7 +91,7 @@
 
 .aboutpic {
     width: 80%;
-    min-width: 300px;
+    min-width: 320px;
     margin: auto;
 }
 
